@@ -87,7 +87,7 @@ sudo journalctl -u pulsesecure -e
 ```
 
 **UI doesn't launch**  
-Install optional dependencies: `sudo pacman -S gtkmm3 webkit2gtk`
+Install dependencies `gtkmm3` (extra) and `webkit2gtk` (AUR).
 
 **Chromium Embedded Framework (CEF) won't start**  
 Check if the install script ran successfully.
