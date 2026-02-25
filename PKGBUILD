@@ -15,6 +15,8 @@ options=(!strip !debug)
 optdepends=('psmisc: for pulsesvc -K' 'gtkmm3: for pulseUi' 'webkit2gtk: for pulseUi')
 conflicts=(pulse-connect-secure)
 
+source=("EULA.txt")
+md5sums=('261848a28201e5386ec4bf587473a48b')
 source_x86_64=("ps-pulse-linux-22.8r5-b41063-installer.rpm")
 md5sums_x86_64=('93a073f8ff0f30d71bb603388dadb417')
 
