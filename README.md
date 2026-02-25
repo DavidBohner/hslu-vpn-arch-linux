@@ -21,10 +21,11 @@ This variant:
 ## Requirements
 
 - Dependency packages
-```bash
-sudo pacman -S gcc-libs libgnome-keyring openssl curl dbus libbsd dmidecode gtkmm3 webkit2gtk psmisc base-devel
-```
-(`gtkmm3` and `webkit2gtk`, while optional for pulse itself, are required for the UI)
+    - [aur/libgnome-keyring](https://aur.archlinux.org/packages/libgnome-keyring)
+    - gtkmm3
+    - webkit2gtk
+
+    (`gtkmm3` and `webkit2gtk`, while optional for pulse itself, are required for the UI)
 - The RPM installer downloaded from HSLU's software portal
 
 ---
@@ -51,7 +52,12 @@ sudo pacman -S gcc-libs libgnome-keyring openssl curl dbus libbsd dmidecode gtkm
    sudo systemctl enable --now pulsesecure
 ```
 
-5. Launch **Pulse Secure / Ivanti Secure Access** from your application menu or run `/opt/pulsesecure/bin/pulseUi`.
+5. **Install the CEF:**
+```bash
+   sudo /opt/pulsesecure/bin/setup_cef.sh install
+```
+
+6. Launch **Pulse Secure / Ivanti Secure Access** from your application menu or run `/opt/pulsesecure/bin/pulseUi`.
 
 ---
 
@@ -60,13 +66,13 @@ sudo pacman -S gcc-libs libgnome-keyring openssl curl dbus libbsd dmidecode gtkm
 When HSLU distributes a newer RPM:
 
 1. Download the new RPM from the software portal.
-2. Update `pkgver`, `pkgrel`, and the filename in `source_x86_64` in `PKGBUILD` if I haven't already.
+2. `git pull`, or update `pkgver`, `pkgrel`, and the filename in `source_x86_64` in `PKGBUILD` if I haven't already.
 3. Update the checksum in `md5sums_x86_64`: (or run step 4 with --skipchecksums)
 ```bash
    md5sum ps-pulse-linux-<newversion>-installer.rpm
 ```
 4. Place the new RPM in the repo directory and run `makepkg -sri` again.
-5. (opt) If you had to do step 2 .. let me know?
+5. (opt) If you had to do step 2 manually .. let me know? I don't automatically get notified when a new version becomes available.
 ---
 
 ## Troubleshooting
