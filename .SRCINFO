@@ -1,0 +1,25 @@
+pkgbase = pulse-secure
+	pkgdesc = Ivanti Secure Access Client
+	pkgver = 22.8r5_b41063
+	pkgrel = 1
+	url = https://www.pulsesecure.net/
+	install = pulse-secure.install
+	arch = x86_64
+	license = custom
+	depends = gcc-libs
+	depends = libgnome-keyring
+	depends = openssl
+	depends = curl
+	depends = dbus
+	depends = libbsd
+	depends = dmidecode
+	optdepends = psmisc: for pulsesvc -K
+	optdepends = gtkmm3: for pulseUi
+	optdepends = webkit2gtk: for pulseUi
+	conflicts = pulse-connect-secure
+	options = !strip
+	options = !debug
+	source_x86_64 = ps-pulse-linux-22.8r5-b41063-installer.rpm
+	md5sums_x86_64 = 93a073f8ff0f30d71bb603388dadb417
+
+pkgname = pulse-secure
