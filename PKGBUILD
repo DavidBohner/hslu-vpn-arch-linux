@@ -2,18 +2,18 @@
 # Modified for HSLU compliance compatibility
 # PKGBUILD Modified from upstream AUR: https://aur.archlinux.org/packages/pulse-secure
 
-pkgname=pulse-secure
+pkgname=pulse-secure-hslu
 pkgver=22.8r5_b41063
 pkgrel=1
 pkgdesc='Ivanti Secure Access Client'
 arch=(x86_64)
 license=(custom)
 url='https://www.pulsesecure.net/'
-depends=(gcc-libs libgnome-keyring openssl curl dbus libbsd dmidecode)
+depends=(gcc-libs libsecret openssl curl dbus libbsd dmidecode)
 install=${pkgname}.install
-options=(!strip !debug)
+options=(!strip)
 optdepends=('psmisc: for pulsesvc -K' 'gtkmm3: for pulseUi' 'webkit2gtk: for pulseUi')
-conflicts=(pulse-connect-secure)
+conflicts=(pulse-connect-secure pulse-secure)
 
 source=("EULA.txt")
 md5sums=('261848a28201e5386ec4bf587473a48b')
