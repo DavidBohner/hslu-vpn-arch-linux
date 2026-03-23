@@ -21,7 +21,7 @@ This variant:
 ## Requirements
 
 - Dependency packages
-    - [aur/libgnome-keyring](https://aur.archlinux.org/packages/libgnome-keyring)
+    - libsecret
     - gtkmm3
     - webkit2gtk
 
