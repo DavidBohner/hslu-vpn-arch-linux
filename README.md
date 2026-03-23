@@ -13,7 +13,7 @@ The endpoint has started to verify file signatures, and makepkg defaults to stri
 
 This variant:
 - Targets version `22.8r5-b41063` as currently distributed by HSLU
-- Disables binary stripping (`!strip !debug`) to preserve file integrity for compliance checks
+- Disables binary stripping (`!strip`) to preserve file integrity for compliance checks
 - Removes a now redundant `setup_cef.sh` patch for a bug in the CEF-installer's hash matching that was fixed upstream
 
 ---
